@@ -1,3 +1,4 @@
 module.exports = {
-  publicPath: ''
+  // publicPath: '',
+  lintOnSave: process.env.NODE_ENV !== 'production'
 }
