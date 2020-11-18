@@ -1,27 +1,33 @@
 <template>
   <footer class="app-footer">
     <div class="social">
-      <v-btn
-        class="social-btn"
-        fab
-        text
-      >
-        <icon-facebook class="social-icon"></icon-facebook>
-      </v-btn>
-      <v-btn
-        class="social-btn"
-        fab
-        text
-      >
-        <icon-instagram class="social-icon"></icon-instagram>
-      </v-btn>
-      <v-btn
-        class="social-btn"
-        fab
-        text
-      >
-        <icon-telegram class="social-icon"></icon-telegram>
-      </v-btn>
+      <a href="https://www.facebook.com/danil.lodinov.1" class="social-link">
+        <v-btn
+          class="social-btn"
+          fab
+          text
+        >
+          <icon-facebook class="social-icon"></icon-facebook>
+        </v-btn>
+      </a>
+      <a href="https://www.instagram.com/d.ldnv/?hl=ru" class="social-link">
+        <v-btn
+          class="social-btn"
+          fab
+          text
+        >
+          <icon-instagram class="social-icon"></icon-instagram>
+        </v-btn>
+      </a>
+      <a href="https://t.me/dldnv" class="social-link">
+        <v-btn
+          class="social-btn"
+          fab
+          text
+        >
+          <icon-telegram class="social-icon"></icon-telegram>
+        </v-btn>
+      </a>
     </div>
     <div class="copyright-text">
       <span>© 2020</span>
@@ -53,17 +59,18 @@ export default {
     .social
       display: flex
       justify-content: center
-      &-btn
-        width: 32px
-        height: 32px
+      &-link
         margin-right: 37px
         &:last-child
           margin-right: 0
-      &-icon
-        width: 32px
-        height: 32px
-        color: #373737
-        fill: #ffffff
+        .social-btn
+          width: 32px
+          height: 32px
+        .social-icon
+          width: 32px
+          height: 32px
+          color: #373737
+          fill: #ffffff
 
     .copyright-text
       font-size: 22px

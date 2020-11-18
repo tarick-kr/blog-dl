@@ -6,27 +6,33 @@
       </router-link>
       <v-spacer />
       <div class="social">
-        <v-btn
-          class="social-btn"
-          fab
-          text
-        >
-          <icon-facebook class="social-icon"></icon-facebook>
-        </v-btn>
-        <v-btn
-          class="social-btn"
-          fab
-          text
-        >
-          <icon-instagram class="social-icon"></icon-instagram>
-        </v-btn>
-        <v-btn
+        <a href="https://www.facebook.com/danil.lodinov.1" class="social-link">
+          <v-btn
+            class="social-btn"
+            fab
+            text
+          >
+            <icon-facebook class="social-icon"></icon-facebook>
+          </v-btn>
+        </a>
+        <a href="https://www.instagram.com/d.ldnv/?hl=ru" class="social-link">
+          <v-btn
+            class="social-btn"
+            fab
+            text
+          >
+            <icon-instagram class="social-icon"></icon-instagram>
+          </v-btn>
+        </a>
+        <a href="https://t.me/dldnv" class="social-link">
+          <v-btn
           class="social-btn"
           fab
           text
         >
           <icon-telegram class="social-icon"></icon-telegram>
         </v-btn>
+        </a>
       </div>
       <v-speed-dial
         class="social-toggle-btn"
@@ -45,24 +51,30 @@
             <icon-chevron class="toggle-btn-ch" v-else></icon-chevron>
           </v-btn>
         </template>
-        <v-btn
-          fab
-          small
-        >
-          <icon-facebook class="social-icon"></icon-facebook>
-        </v-btn>
-        <v-btn
+        <a href="https://www.facebook.com/danil.lodinov.1" class="social-link">
+          <v-btn
+            fab
+            small
+          >
+            <icon-facebook class="social-icon"></icon-facebook>
+          </v-btn>
+        </a>
+        <a href="https://www.instagram.com/d.ldnv/?hl=ru" class="social-link">
+          <v-btn
           fab
           small
         >
           <icon-instagram class="social-icon"></icon-instagram>
         </v-btn>
-        <v-btn
+        </a>
+        <a href="https://t.me/dldnv" class="social-link">
+          <v-btn
           fab
           small
         >
           <icon-telegram class="social-icon"></icon-telegram>
         </v-btn>
+        </a>
       </v-speed-dial>
     </div>
   </header>

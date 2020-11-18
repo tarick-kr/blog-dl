@@ -6,8 +6,10 @@
         <router-view/>
       </main>
       <aside class="app-aside">
-        <v-divider class="divider"></v-divider>
+        <v-divider class="divider-top"></v-divider>
         <app-about></app-about>
+        <v-divider class="divider-bottom"></v-divider>
+        <app-expert></app-expert>
       </aside>
     </div>
     <app-footer></app-footer>
@@ -18,12 +20,14 @@
 import AppHeader from '@/components/global/AppHeader'
 import AppFooter from '@/components/global/AppFooter'
 import AppAbout from '@/components/About'
+import AppExpert from '@/components/Expert'
 
 export default {
   components: {
     AppHeader,
     AppFooter,
-    AppAbout
+    AppAbout,
+    AppExpert
   }
 }
 </script>
@@ -36,8 +40,11 @@ export default {
       margin-right: 25px
     .app-aside
       max-width: calc(30% - 25px)
-      .divider
+      .divider-top
         display: none
+        margin-bottom: 16px
+      .divider-bottom
+        display: block
         margin-bottom: 16px
 
   @media screen and (max-width: 900px)
@@ -48,8 +55,12 @@ export default {
         margin-right: 0
       .app-aside
         max-width: 100%
-        .divider
+        .divider-top
           display: block
+          margin-bottom: 16px
+        .divider-bottom
+          display: block
+          margin-bottom: 16px
 
   @media screen and (max-width: 530px)
     .app-content
