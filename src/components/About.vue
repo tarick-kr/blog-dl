@@ -2,7 +2,10 @@
   <div class="about-content">
     <div class="about-header">
       <h3 class="about-title">Слово для читача:</h3>
-      <img :src="photo" alt="" class="about-img" height="1280px" width="1280px">
+      <picture>
+        <source type="image/webp" :srcset="photoWebp" class="about-img">
+        <img :src="photo" alt="" loading="lazy" width="1280" height="1280" class="about-img">
+      </picture>
     </div>
     <section>
       <p class="about-text">Вітаю! Мене звати Лодінов Данило. Я народився і виріс у Кривому Розі. Зараз навчаюсь в Львівському національному університеті імені Івана Франка на факультеті журналістики.</p>
@@ -21,12 +24,14 @@
 
 <script>
 import photo from '@/assets/images/photo.jpg'
+import photoWebp from '@/assets/images/photo.webp'
 
 export default {
   name: 'About',
   data () {
     return {
-      photo
+      photo,
+      photoWebp
     }
   }
 }

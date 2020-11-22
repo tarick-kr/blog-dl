@@ -1,27 +1,36 @@
 <template>
   <div class="expert-content">
     <div class="expert-header">
-      <h3 class="expert-title title-header">Експерт блога:</h3>
-      <img :src="photo" alt="" class="expert-img" height="1280px" width="1280px">
+      <h3 class="expert-title title-header">Експерт блогу:</h3>
+      <picture>
+        <source type="image/webp" :srcset="photoWebp" class="expert-img">
+        <img :src="photo" alt="" loading="lazy" width="1280" height="1280" class="expert-img">
+      </picture>
     </div>
     <section>
       <h3 class="expert-title title-section">Експерт блога:</h3>
-      <p class="expert-text">Вітаю! Мене звати Лодінов Данило. Я народився і виріс у Кривому Розі.
-                             Зараз навчаюсь в Львівському національному університеті імені Івана Франка на факультеті журналістики.</p>
-      <p class="expert-text">Мій блог не тільки про цікаву , а й про прогресивну науку.
-                            Блог буде цікавий:</p>
+      <h4 class="expert-subtitle top">Сергій Тарасов</h4>
+      <h4 class="expert-subtitle">FullStack веб-розробник</h4>
+      <p class="expert-text"><strong>Мови програмування:</strong> Javascript, PHP, Java</p>
+      <p class="expert-text"><strong>Фреймворки та CMS:</strong> Vue.js, Nuxt.js, Laravel, Wordpress</p>
+      <p class="expert-text"><strong>Технології:</strong> HTML/CSS, Git, Gulp, WebPack</p>
+      <p class="expert-text"><strong>Препроцесори:</strong> SCSS (SASS), PAG</p>
+      <p class="expert-text"><strong>Бекенд:</strong> Node.js, Apache, NGINX</p>
+      <p class="expert-text"><strong>Бази даних:</strong> MongoDb, Firebase, MySQL</p>
     </section>
   </div>
 </template>
 
 <script>
 import photo from '@/assets/images/photo-exp.jpg'
+import photoWebp from '@/assets/images/photo-exp.webp'
 
 export default {
   name: 'Expert',
   data () {
     return {
-      photo
+      photo,
+      photoWebp
     }
   }
 }
@@ -50,10 +59,16 @@ export default {
         margin-bottom: 14px
       .expert-title.title-section
         display: none
+      .expert-subtitle
+        font-size: 20px
+        line-height: 27px
+        margin-bottom: 10px
+      .expert-subtitle.top
+        margin-bottom: 0
       .expert-text
         font-size: 18px
         display: block
-        padding-bottom: 12px
+        padding-bottom: 2px
         line-height: 24px
       ul
         font-size: 18px
