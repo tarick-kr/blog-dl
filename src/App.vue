@@ -3,7 +3,9 @@
     <app-header></app-header>
     <div class="app-content app-container">
       <main class="app-main">
-        <router-view/>
+        <transition name="fade" mode="out-in" appear>
+          <router-view/>
+        </transition>
       </main>
       <aside class="app-aside">
         <v-divider class="divider-top"></v-divider>
@@ -66,5 +68,12 @@ export default {
     .app-content
       .app-aside
         margin-bottom: 25px
+
+  .fade-enter-active
+    transition: all .3s ease
+  .fade-leave-active
+    transition: all .3s ease
+  .fade-enter, .fade-leave-active
+    opacity: 0
 
 </style>
